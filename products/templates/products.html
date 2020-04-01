@@ -9,7 +9,7 @@
 
                 <h3>{{ product.name }}</h3>
                 <p class="product-description">{{ product.description }}</p>
-                <p>Click here {{ product.link }} to see product video</p>
+                <p>Click <a href="{{ product.link }}" target="blank">here</a>  to see product video</p>
                 <p>{{ product.price }}</p>
 
                 <form method="post" action="{% url 'add_to_cart' product.id %}">
