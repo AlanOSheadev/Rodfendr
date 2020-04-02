@@ -23,13 +23,13 @@
                     <h3>{{ item.product.name }}</h3>
                     <p class="product-description">{{ item.product.descriptio }}</p>
                     <p>{{ item.quantity }}</p>
-                    <p>item.product.price</p>
+                    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>item.product.price</p>
                 </div>
             </div>
         </div>
     {% endfor %}
 </div>
-<div class="row">
+<div class="row row-flex">
     <p>Total</p>
     <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
 </div>
