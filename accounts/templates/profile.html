@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="container">
+<div class="d-flex content-center">
     <h2>Success!</h2>
+    <h3><i class="fa fa-user"></i> {{ user.username }}</h3>
     <p>You are logged in as {{ user.email }} </p>
+</div>
+<button type="submit">Change your email address</button>
+</div>
 {% endblock %}
