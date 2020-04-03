@@ -61,14 +61,9 @@
             </div>
         </div>
     {% endif %}
-    <div class="container">
-    <div>
-    <form action="{% url 'search' %}" method="get">
-    <input type="text" name="q">
-    <button type="submit">Search</button></form>
-    </div>
+    
         {% block content %} {% endblock %}
-    </div>
+    
     <footer  class="navbar navbar-default navbar-fixed-bottom">
              <ul class="nav navbar-center row row-flex">
                 <li class="nav-item col-12">
