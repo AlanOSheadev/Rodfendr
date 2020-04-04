@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'checkout',
     'storages',
     'privacy',
+    'contact_us',
 ]
 
 MIDDLEWARE = [

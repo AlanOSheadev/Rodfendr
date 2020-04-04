@@ -12,6 +12,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     {% block head_js %}
+     <script >
+        (function() {
+            emailjs.init("user_nuiaBSpjXouOL9kdznLW2");
+        })();
+    </script>
     {% endblock head_js %}
 </head>
 <body>
@@ -31,12 +36,14 @@
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                         <li><a href="{% url 'products' %}"><i class="fa fa-home"></i> Home</a></li>
+                        <li><a href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></li>
                         <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
                         <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
                         <li><a href="{% url 'privacy' %}"><i class="fa fa-balance-scale" aria-hidden="true"></i> Privacy</a></li>
                     {%  else %}
                         <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
                         <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
+                        <li><a href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></li>
                         <li><a href="{% url 'privacy' %}"><i class="fa fa-balance-scale" aria-hidden="true"></i> Privacy</a></li>
                     {% endif %}
                     <li>
@@ -64,11 +71,12 @@
     
         {% block content %} {% endblock %}
     
-    <footer  class="navbar navbar-default navbar-fixed-bottom">
+    <footer  class="navbar navbar-default navbar-fixed-bottom justify-self-center">
              <ul class="nav navbar-center row row-flex">
                 <li class="nav-item col-12">
                     <a class="nav-link active btn-purple" href="{% url 'products' %}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                 </li>
+                <li><a class="nav-link active btn-purple" href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></li>
                 <li class="nav-item">
                     <a class="nav-link btn-purple" href="https://business.facebook.com/Rodfendr/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </li>
@@ -86,5 +94,6 @@
                 </li>
             </ul>
     </footer>
+    <script src="../static/js/sendemail.js"></script>
 </body>
 </html>
