@@ -35,15 +35,15 @@
 </div>
 <div class="row row-flex">
     <div class="col-12 justify-content-center">
-    <div class="input-group"><p>Enter Discount Code <input type="text" name="discount"></p></div>
+    <div class="input-group"><p>Enter Discount Code <input type="text" name="discount_code"></p></div>
     </div>
 </div>
+
 <div class="row row-flex">
     <div class="col-12 justify-content-center">
     <p>Total <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
     <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
     </div>
 </div>
-
 
 {% endblock %}
