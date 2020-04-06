@@ -22,8 +22,8 @@
                         <label for="exampleInputAmount" class="sr-only">New Qty</label>
                         <div class="input-group">
                             <div class="input-group-addon">Qty</div>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control" value="{{ item.product.quantity }}">
-                            <div class="input-group-addon">{{item.quantity}}</div>
+                            <input name="quantity" type="number" min="0" max="999" class="form-control" value="{{ item.quantity }}">
+                            <div class="input-group-addon">Change Quantity?</div>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
@@ -33,10 +33,17 @@
     </div>
     {% endfor %}
 </div>
-<div class="row">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+<div class="row row-flex">
+    <div class="col-12 justify-content-center">
+    <div class="input-group"><p>Enter Discount Code <input type="text" name="discount"></p></div>
+    </div>
 </div>
+<div class="row row-flex">
+    <div class="col-12 justify-content-center">
+    <p>Total <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
+    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+    </div>
+</div>
+
 
 {% endblock %}
