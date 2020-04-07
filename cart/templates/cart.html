@@ -13,7 +13,7 @@
         <div class="caption">
             <h3>{{ item.product.name }}</h3>
             <p class="product-description">{{ item.product.description }}</p>
-            <p>{{ item.product.price }}</p>
+            <p> <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ item.product.price }}</p>
             <p>
                 
                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
@@ -33,11 +33,7 @@
     </div>
     {% endfor %}
 </div>
-<div class="row row-flex">
-    <div class="col-12 justify-content-center">
-    <div class="input-group"><p>Enter Discount Code <input type="text" name="discount_code"></p></div>
-    </div>
-</div>
+
 
 <div class="row row-flex">
     <div class="col-12 justify-content-center">
