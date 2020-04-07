@@ -11,6 +11,7 @@ import stripe
 # Create your views here.
 stripe.api_key = settings.STRIPE_SECRET
 
+
 @login_required()
 def checkout(request):
     if request.method == "POST":
@@ -21,6 +22,14 @@ def checkout(request):
             order = order_form.save(commit=False)
             order.date = timezone.now()
             order.save()
+
+            user = auth.authenticate(request.POST.get('email'),
+                                     password=request.POST.get('password1'))
+
+            if user:
+                discountPrice = 90
+            else:
+                discountPrice = 100
 
             cart = request.session.get('cart', {})
             total = 0
@@ -36,7 +45,7 @@ def checkout(request):
 
             try:
                 customer = stripe.Charge.create(
-                    amount=round(int(total * 100), 2),
+                    amount=round(int(total * discountPrice), 2),
                     currency="EUR",
                     description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id']
