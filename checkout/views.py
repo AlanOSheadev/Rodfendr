@@ -23,14 +23,6 @@ def checkout(request):
             order.date = timezone.now()
             order.save()
 
-            user = auth.authenticate(request.POST.get('email'),
-                                     password=request.POST.get('password1'))
-
-            if user:
-                discountPrice = 90
-            else:
-                discountPrice = 100
-
             cart = request.session.get('cart', {})
             total = 0
             for id, quantity in cart.items():
@@ -45,11 +37,11 @@ def checkout(request):
 
             try:
                 customer = stripe.Charge.create(
-                    amount=round(int(total * discountPrice), 2),
+                    amount = int(total * 100),
                     currency="EUR",
                     description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id']
-                )
+                )            
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
 

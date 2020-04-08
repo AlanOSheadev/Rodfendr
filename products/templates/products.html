@@ -7,6 +7,14 @@
     </div>
     
 {% block content %}
+<div class="welcome row">
+<h1 class="col-12">Hello! and welcome to our Site</h1>
+<h2 class="col-12">We are so happy that you have decided to visit us.</h2>
+<h4 class="col-12">Please take your time and have a look at all our uniquely designed products.</h4>
+<p class="col-12">All our products have been designed specifically for their purpose. <br>Our products are different, affordable and come with
+    shipping included.  <br>We hope you enjoy your visit and if you have any questions or queries please don't hesitate to <a class="nav-link active btn-purple" href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></p>
+
+</div>
 <div class="row row-flex">
     {% for product in products %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
