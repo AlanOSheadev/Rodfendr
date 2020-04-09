@@ -21,6 +21,11 @@
       emailjs.init("user_jQ7YVy8hfIPV4mTrBYSGe");
    })();
 </script>
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#staticBackdrop').modal('show');
+    });
+</script>
 </head>
 <body>
     <!-- Fixed masthead -->
@@ -42,7 +47,7 @@
                         <li><a href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></li>
                         <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
                         <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
-                        <li><a href="{% url 'privacy' %}"><i class="fa fa-balance-scale" aria-hidden="true"></i> Privacy</a></li>
+                        <li><a href="{% url 'privacy' %}"><i class="fa fa-balance-scale" aria-hidden="true"></i> Legal</a></li>
                     {%  else %}
                         <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
                         <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
@@ -75,6 +80,7 @@
         {% block content %}
        
         {% endblock %}
+       
      <!-- Found on W3 schools -->
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Top</button>
   <br>

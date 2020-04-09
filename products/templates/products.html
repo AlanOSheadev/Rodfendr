@@ -9,6 +9,26 @@
 <p class="col-12">All our products have been designed specifically for their purpose. Our products are different, <br>affordable and come with
     shipping included. We hope you enjoy your visit, if you have any <br>questions or queries please don't hesitate to <a class="nav-link active btn-purple" href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></p>
 </div>
+ <!-- Found on Bootsrtap -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true"  data-target="#staticBackdrop">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Cookie Bar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Please accept our cookie policy to continue</p>
+        <p>our cookie policy can be found in our legal section</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">accept</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div>
     <form action="{% url 'search' %}" method="get" class="search">
     <input type="text" name="q">
