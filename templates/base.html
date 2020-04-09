@@ -32,8 +32,11 @@
 </script>
 <script type="text/javascript">
     $(window).on('load',function(){
+        if (localStorage.getItem("hasCodeRunBefore") === null) {
         $('#staticBackdrop').modal('show');
-    });
+        localStorage.setItem("hasCodeRunBefore", true);
+    }
+    });     
 </script>
 </head>
 <body>
