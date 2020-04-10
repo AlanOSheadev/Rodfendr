@@ -2,7 +2,8 @@
 <div class="container">
 {% block content %}
 <div class="welcome row justify">
-<h1 class="col-12">Hello! and welcome to our Site</h1>
+<h1 class="col-12">Hello! and welcome to our</h1>
+<h1>Unique Fishing Tackle Shop</h1>
 <p><i class="fa fa-handshake-o fa-5x" aria-hidden="true"></i></p>
 <h2 class="col-12">We are so happy that you have decided to visit us.</h2>
 <h4 class="col-12">Please take your time and have a look at all our uniquely designed products.</h4>
@@ -21,7 +22,7 @@
       </div>
       <div class="modal-body">
         <p>Please accept our cookie policy to continue</p>
-        <p>our cookie policy can be found in section 6 of our Privacy Policy in our legal section</p>
+        <p>our cookie policy can be found in section 6 of our Privacy Policy in our <a href="{% url 'privacy' %}"> legal section</a></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success closebtn" data-dismiss="modal">accept</button>
@@ -29,7 +30,7 @@
     </div>
   </div>
 </div>
-<div>
+<div class="container">
     <form action="{% url 'search' %}" method="get" class="search">
     <input type="text" name="q">
     <button class="btn btn-success" type="submit">Search</button></form>
