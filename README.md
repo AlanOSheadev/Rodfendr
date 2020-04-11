@@ -8,7 +8,7 @@ This app allows the visitor to look at the different products which are availabl
 
 Click on the image to go to the live app.
  
-[![Responsive Design](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/responsive.png "Responsive Design")](https://rodfendr.herokuapp.com/)
+[![Responsive Design](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/responsive.png?versionId=null "Responsive Design")](https://rodfendr.herokuapp.com/)
  
 ### Summary
  
