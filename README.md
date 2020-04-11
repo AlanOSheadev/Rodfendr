@@ -35,7 +35,7 @@ User expectations:
 A visitor to the app will expect to see a well themed app with relevant information. This app is giving the user the opportunity to purchase unique fishing tackle.  These products are ideal as gifts for those who have loved ones who partake in fishing. 
  
 ### Strategy
- 
+I wanted to produce a simple ecommerce site with very little distracting the visitor from the products which are available to purchase.  The colours were chosen to compliment eachother and to provide a pleasing contrast to eachother. The hero image immediately portrays me relaxing and fishing while using my patented rod rest Rodfendr, but it is also used to invoke the benefits of going to relax on a fishing trip, hopefully inspiring the visitor to make a purchase as they will realise how much an angler would enjoy our unique tackle solutions. 
 
  
 ### Scope
