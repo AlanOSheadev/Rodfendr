@@ -32,11 +32,11 @@ Click on the image to go to the live app.
  
 User expectations:
  
-A visitor to the app will expect to see a well themed app with relevant information.  This app has the potential to hold a lot of information for that reason I decided to add pagination.  I have limited my pages to 8 flies so that the visitor is not overwhelmed by too much information.  The hero image is also selected to remind the visitor of that precious moment when a fish takes your fly.  In this way I hope that they will feel encouraged to interact more with the app and to even click on the link to the sponsors page and make a purchase.  I sent the app link to several fly fishermen and fly tiers and the feedback was that it was a nice app and would be very useful.
+A visitor to the app will expect to see a well themed app with relevant information. This app is giving the user the opportunity to purchase unique fishing tackle.  These products are ideal as gifts for those who have loved ones who partake in fishing. 
  
 ### Strategy
  
-I want the visitor to immediately think of fly fishing and the excitement of connecting with a fish.  I want them to learn how to tie the flies that they might need for their next fishing trip and I want them to start to think about Rodfendr Pro and to get curious enough to visit the page through the link in the top and bottom nav bars and consider making a purchase.
+
  
 ### Scope
  
@@ -61,21 +61,13 @@ The colours were chosen to contrast easily and make it easier for the visitor to
  
 ### Existing Features:
  
-The top navigation bar contains a link to the landing page which is marked as Home and has a house icon you can return home from any page by using this button,  there is also a contact page which is an active email request and is marked as contact us with a speech bubble icon.
+The top navigation bar contains a link to the landing page which is marked as Home and has a house icon you can return home from any page by using this button,  there is also a contact page which is an active email request and is marked as contact us with a speech bubble icon. The bottom navigation bar also has home and contact us buttons as well as links to all of Rodfendr's social media sites.
  
+The top navigation bar has two orientations one for a new visitor who has not registered with the site and the other is when visitors decide to login.  Login is required when making purchases which is what was intended, this allows a vititor time to familiarize themselves with the site before being required to register.
 
- 
-The search bar has two options for the visitor:
-1. The search by fly name allows the visitor to search for the information regarding a specific fly by it's name, it is not case sensitive and will search for single letters also giving a full list of fly names which match the input.  This search is paginated again to 8 flies so as not to overload the visitor.
-2. The search by submitted by allows the visitor to search for flies that have been submitted by a specific contributor to the database. This is not case sensitive and will search with only a letter also returning all the contributors who have submitted to the database matching the input. This search is also paginated as above.
- 
-The Add Fly button is highlighted in green and is in the middle of the page this allows a contributor to add all the components of a fly it's name etc and a link to further instructions if they wish and they can also add their own name or company name as the one who submitted the information.(Create)
- 
-All the flies in the database are then listed they are paginate into pages of 8 flies so as not to overload the page,  they have a dropdown menu which contains all the components of each fly, the name of the fly, and options to edit or delete flies.(Read, Update and Delete) I have purposefully prevented some flies from being edited or deleted, I don't want anyone to accidentally or purposefully delete or edit all the entries.
- 
-The bottom navigation bar has the same home button as the top and will return the visitor home from any page,  it also has a privacy page, it is marked with a legal scales icon, which is a step towards making the app a legal page. There are several links to social media sites which are marked by their brand icons and all of these will take the visitor to a social media page owned by the sponsor Rodfendr.  Finally there is a buy button as in the top bar for Rodfendr Pro again marked with an orange credit card logo to draw the visitors attention and encourage them to visit the sponsors website.
- 
-I did include a back to top button but when I added pagination this was no longer needed.  Pagination has helped not to clutter the page with too much information and for now I have chosen to limit the number to 8 flies per page.
+Before you have registeres the top navigation bar shows the following options 'Register', 'Login', 'Contact us' and 'Privacy'.  After the visitor has logged in the top navigation bar changes to 'Home', 'Contact Us', 'Profile', 'Log Out', 'Legal' and  'Cart'.  The bottom navigation bar does not change.
+
+
  
 [Back to Top](#summary)
  
