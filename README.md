@@ -21,7 +21,6 @@ Click on the image to go to the live app.
 * [Features](#features)
     * [Existing Features](#existing-features)
     * [Future Features](#future-features)
-* [Database](#database)
 * [Technologies](#technologies)
 * [Testing](#testing)
 * [Deployment](#deployment)
@@ -89,6 +88,8 @@ Google analytics records your visit and your behaviour while on the site.
  
 I would like to add facebook pixels so that I can retarget those visiting the site with products that may interest them.
 
+I tried to add discount codes to the app but it proved a little difficult so I made the decision to add them later when I have more experience.
+
  
 [Back to Top](#summary)
  
@@ -115,8 +116,19 @@ I would like to add facebook pixels so that I can retarget those visiting the si
 Extensive manual testing was carried out on this app.  It was tested in Chrome, Firefox and Edge the app did not load properly in Edge and therefore did not function as expected but in Chrome and Firefox all areas functioned as expected.  The nav bar buttons top and bottom bring the user to the correct page whether that is inside the app or to a new page in the case of the social media and buy buttons.  The contact us page sends an email and the privacy page displays as expected.  
 
 The checkout page was tested using Stripe in test mode but now it's a live version.
+![Checkout](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/checkoutpage.png "Checkout")
+![Checkout result](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/checkoutresulttest.png "Checkout result") 
 
-Travis CI was used to continuously test the building of the app. 
+The contact us page was extensively tested and at the start I had issues as can be seen from the following photos.  First I had to link with my gmail account which I had created for this app.
+![Gmail error](![Checkout result](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/checkoutresulttest.png "Gmail error") "Checkout result")
+
+Secondly I had to wire up the js file correctly.
+![js error](![Checkout result](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/jsmailtesterror.png "js error") "Checkout result")
+Once these errors were identified and rectified the email works just as expected.
+
+
+Travis CI was used to continuously test the building of the app.
+
 [![Build Status](https://travis-ci.com/AlanOSheadev/Rodfendr.svg?branch=master)](https://travis-ci.com/AlanOSheadev/Rodfendr) 
  
 Responsiveness:  The site was tested on multiple devices (iPhone 4, 5/SE,6,7,8 iPhone 6,7,8 plus, iPhone X : Chrome and Safari, iPad, iPad Pro,Samsung Galaxy Slll,5S)  and was shown to load and respond as expected with all the buttons being visible and functioning in accordance with expectations 
@@ -135,17 +147,163 @@ Python code is validated through [PEP8](http://pep8online.com/).
  
 ### Deployment
 The app was written and developed on Gitpod and was regularly committed and pushed to Github and Heroku.
+
+The following pip commands are necessary for the app to function properly.
+pip3 install django==1.11.29
+
+pip3 freeze > requirements.txt
+
+django-admin startproject file_name .
+
+django-admin startapp app_name
+
+python3 manage.py migrate
+
+python3 manage.py runserver
+
+python3 manage.py createsuperuser
+
+pip3 install django_forms_bootstrap
+
+pip3 install Pillow
+
+pip3 install dj_database_url
+
+pip3 install psycopg2
+
+pip3 install django-storages
+
+pip3 install boto3
+
+pip3 install stripe
+
+pip3 install gunicorn
+
+
+Add all secret keys to heroku config vars and add 
+DISABLE_COLLECTSTATIC and make it’s value 1
+
+python3 manage.py collectstatic 
+
+Need to run this after any changes to static files in the IDE
  
 Heroku required that some variables are set up in order to deploy the app.  All secret keys and passwords used in the env.py file which is ignored by Github in the .gitignore file are stored in the config vars section of Heroku.  In order to send the app to Heroku I first had to login into Heroku through the Gitpod IDE and then push all the commits to Heroku so any changes could be added to the app, on the last few pushes the Debug was set to False
+
+To set up and install AWS I followed the instruction video on the Code Institutes training and the following steps were taken.
+
+In AWS S3
+
+Create Bucket
+
+Unique name ie - niels-ecommerce
+Ireland
+Allow public access
+
+Create
+
+Open bucket
+Properties - staic website hosting
+Index.html
+
+Error.html
+
+Permissions 
+Cors configuraton
+Add our arn keeping /*
+
+IAM
+Create a group
+Name it close to buket name  - neils ecommerce-group
+Next and create group
+
+Greate policy
+Import managed polcy 
+Choose S3 full policy
+Import
+Change string to a list [ ]
+The first item in the list is going to be our own ARN which we used earlier, but it has been closed in quotes
+The second item in the list again in quotes is going to be the same ARNThis time we append a forward slash and an asterisk
+Review and name it in association with the bucket - niels-eccomerce-policy
+
+Add policy to group
+Got to groups and select my group, goto permissions tap in group search for the policy  we created and check the box and attach
+
+Create user
+New user
+Name - niels-eccomerce-user
+Allow programatic access
+No keys or tags
+Download CSV file
+
+
+Cahnge our files
+Pip3 install django-storages
+Pip3 install boto3
+Add this to settings.py above static_url
+
+AWS_S3_OBJECT_PARAMETERS = {
+
+
+
+
+   'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+
+
+   'CacheControl': 'max-age=94608000'
+
+
+}
+
+
+AWS_STORAGE_BUCKET_NAME = 'ecommerce'
+
+AWS_S3_REGION_NAME = 'eu-west-1'
+
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_SECRET_KEY_ID")
+
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+Add AWS keys to env.py file using CSV information
+next
+Python3 manage.py collectstatic
+Yes to change warning
+
+Custom_storages.py file
+
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+class StaticStorage(S3Boto3Storage):
+
+
+   location = settings.STATICFILES_LOCATION
+class MediaStorage(S3Boto3Storage):
+   location = settings.MEDIAFILES_LOCATION
+ADD these changes to staticfiles in settings.py
+
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+And 
+Python3 manage.py collectstatic
+
+Do similar action for media
+To fix console errors
+In permissions - Cors configuration
+Copy the GET line and change it to HEAD to read font awesome CSS properly
+
  
 [Back to Top](#summary)
  
 ### Media 
-The  backend photos on the app are mine. People are free to add their own links to the app.
+The photos and videos on the app are mine.
+
  
 ### Credits
  
-All the content has been written by myself or contributors. The code I have used has come from videos that I have watched from the Code Institute and from previous projects I have made comments on code that I have used throughout the project.  I would like to thank Cormac, Stephen and my classmates who were a great resource during this project. 
+All the content has been written by myself. The code I have used has come from videos that I have watched from the Code Institute and from previous projects I have made comments on code that I have used throughout the project.  I would like to thank Cormac, Stephen and my classmates who were a great resource during this project. 
  
 [Back to Top](#summary)
 
