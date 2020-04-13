@@ -298,7 +298,7 @@ Copy the GET line and change it to HEAD to read font awesome CSS properly
 [Back to Top](#summary)
  
 ### Media 
-The photos and videos on the app are mine.
+The photos and videos on the app are mine. I also appear in many of them myself.
 
  
 ### Credits
