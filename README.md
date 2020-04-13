@@ -120,10 +120,10 @@ The checkout page was tested using Stripe in test mode but now it's a live versi
 ![Checkout result](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/checkoutresulttest.png "Checkout result") 
 
 The contact us page was extensively tested and at the start I had issues as can be seen from the following photos.  First I had to link with my gmail account which I had created for this app.
-![Gmail error](![Checkout result](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/mailtest1.png "Gmail error")
+![Gmail error](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/mailtest1.png "Gmail error")
 
 Secondly I had to wire up the js file correctly.
-![js error](![Checkout result](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/jsmailtesterror.png "js error") "Checkout result")
+![js error](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/jsmailtesterror.png "js error")
 Once these errors were identified and rectified the email works just as expected.
 
 
@@ -189,7 +189,7 @@ Need to run this after any changes to static files in the IDE
  
 Heroku required that some variables are set up in order to deploy the app.  All secret keys and passwords used in the env.py file which is ignored by Github in the .gitignore file are stored in the config vars section of Heroku.  In order to send the app to Heroku I first had to login into Heroku through the Gitpod IDE and then push all the commits to Heroku so any changes could be added to the app, on the last few pushes the Debug was set to False
 
-To set up and install AWS I followed the instruction video on the Code Institutes training and the following steps were taken.
+To set up and install AWS I followed the instruction video on the Code Institutes training and the following steps were taken. If you don't have an amazon account you need to open one and select amazon web services (AWS) and then S3.
 
 In AWS S3
 
