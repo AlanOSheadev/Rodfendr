@@ -40,11 +40,11 @@ I wanted to produce a simple ecommerce site with very little distracting the vis
  
 ### Scope
  
-The app is designed to get the visitor to think about what flies they have, and which flies they can make themselves while adding their own creations and allowing others to see what can be done.  There is also the subtle reminder that this app is sponsored by Rodfendr Pro and they might consider visiting the sponsors page to get more information or make a purchase.
+The app is designed to get the visitor to think about what fishing tackle they would like have, or which of our products would make a great gift for an angler they might know.
  
 ### Structure
  
-The page is made to make the visitor want to tie a fly and go fishing with a large 'Hero' image and the relevant information pertaining to each fly and how to make it below.  The site is paginated to ensure that the visitor is not overwhelmed.  I added a search by fly name and a search by submitted by.  Some people will want to search by those who have submitted the fly as fly tying could be considered an artform with different artists having a better reputation.
+The page is designed to make the visitor feel welcome and to think about what fishing tackle they might need it is likely that they have not seen all of our products before anywhere.  The hero image give a great sense of how a relaxing day fishing can be good for you.  The message within the image is welcoming and lets you know that the price includes shipping.  As you scroll down you immediately see our unique list of products each has a picture and a brief description as well as a short video.  I felt that this was the best way to communicate the benefits of our products without overwhelming the visitor with information and allowing them to a decision on what to purchase.
  
 [Back to Top](#summary)
  
@@ -60,26 +60,35 @@ The colours were chosen to contrast easily and make it easier for the visitor to
 ## Features
  
 ### Existing Features:
+
+On entering the site a modal opens and explains that this site contains cookies and has a link which goes to our legal page.  The visitor must click withtin the modal therefore accepting the cookies.  The modal will only open once unless the visitor clears their browser in which case the modal will fire again.
  
-The top navigation bar contains a link to the landing page which is marked as Home and has a house icon you can return home from any page by using this button,  there is also a contact page which is an active email request and is marked as contact us with a speech bubble icon. The bottom navigation bar also has home and contact us buttons as well as links to all of Rodfendr's social media sites.
+The top navigation bar contains a link to the landing page which is marked as Home and has a house icon you can return home from any page by using this button,  there is also a contact page which is an active email request and is marked as contact us with a speech bubble icon. The bottom navigation bar also has home and contact us buttons as well as links to all of Rodfendr's social media sites. These buttons will change when you hover over them to let you know that they are buttons to be clicked.
  
 The top navigation bar has two orientations one for a new visitor who has not registered with the site and the other is when visitors decide to login.  Login is required when making purchases which is what was intended, this allows a vititor time to familiarize themselves with the site before being required to register.
 
 Before you have registeres the top navigation bar shows the following options 'Register', 'Login', 'Contact us' and 'Privacy'.  After the visitor has logged in the top navigation bar changes to 'Home', 'Contact Us', 'Profile', 'Log Out', 'Legal' and  'Cart'.  The bottom navigation bar does not change.
 
+There is a large but not overwhelming hero image which shows me fishing with Rodfendr the message contained within is welcoming and lets you know that shipping is included in our pricing.
 
- 
+There is a simple search bar which will bring you to a product within our range of products.
+
+Next you are shown all our current products which have a picture of the product as well as a biref description and a short video of each product and an option to select the number of each product you wish to purchase.  This sections is very clean and clear as I want the main focus to be on the products.
+
+If you choose a product or number of products they are added to the cart automatically and a badge will appear on the top navigation bar letting you know how many items are in your cart.
+
+To purchase your items first you must select the cart and you are given a chance to amend your items, change quantities etc.  Once you are happy with the items in your cart you will click on the checkout button where your payment details will be taken using Stripe.  At the checkout you will also enter the delivery address for the order.  An image and the price of each item your are paying for is desplayed above the forms as well as the total amount which will be taken from your card.
+
+Google analytics records your visit and your behaviour while on the site.
+
+
+
 [Back to Top](#summary)
  
 ### Future Features
  
-I would like to add a login to the page so that contributors can only edit and delete their own contributions to the database.  
- 
-A cookie bar would make the app fully legal but since no data except for what the visitor inserts into the database is being taken right now it is not necessary.
- 
 I would like to add facebook pixels so that I can retarget those visiting the site with products that may interest them.
- 
-I may decide to change the colours of the app to match those of the sponsors site I will await user feedback and decide then.
+
  
 [Back to Top](#summary)
  
@@ -90,33 +99,27 @@ I may decide to change the colours of the app to match those of the sponsors sit
 3. Bootstrap    Makes it easy to implement structures within the pages of the app and allows them to be responsive eg for mobile phones
 4. JQuery       Required in conjunction with Javascript to enable the email to function properly which also utilized email.js       
 5. Heroku       Heroku is a cloud platform as a service supporting several programming languages. I am using Heroku to deploy the app.
-6. Django
-7. AWS
+6. Django       Django is a Python-based free and open-source web framework, which follows the model-template-view architectural pattern. It is maintained by the Django Software Foundation, an independent organization established as a 501 non-profit. Django's primary goal is to ease the creation of complex, database-driven websites.
+7. Database     Heroku Postgres is a SQL database as a service with operational expertise built in, easy setup, security by default, database forking, credentials, and more
+8. AWS          Amazon Web Services is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.
+9. Bootstrap    Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
+10. EnailJS     EmailJS helps sending emails using client side technologies only. No server is required – just connect EmailJS to one of the supported email services, create an email template, and use our Javascript library to trigger an email.
+11. Stripe    Stripe is an American technology company based in San Francisco, California. Its software allows individuals and businesses to make and receive payments over the Internet.
+12. Travis CI   Travis CI is a hosted continuous integration service used to build and test software projects hosted at GitHub and Bitbucket. Travis CI provides various paid plan for private projects, and a free plan for open source. TravisPro provides custom deployments of a proprietary version on the customer's own hardware.
 
  
 [Back to Top](#summary)
  
 ### Testing
  
-Extensive manual testing was carried out on this app.  It was tested in Chrome, Firefox and Edge the app did not load properly in Edge and therefore did not function as expected but in Chrome and Firefox all areas functioned as expected.  The nav bar buttons top and bottom bring the user to the correct page whether that is inside the app or to a new page in the case of the social media and buy buttons.  The drop down for the contents and the edit and delete buttons functioned as expected as did the add new fly button.  The contact us page sends an email and the privacy page displays as expected.
+Extensive manual testing was carried out on this app.  It was tested in Chrome, Firefox and Edge the app did not load properly in Edge and therefore did not function as expected but in Chrome and Firefox all areas functioned as expected.  The nav bar buttons top and bottom bring the user to the correct page whether that is inside the app or to a new page in the case of the social media and buy buttons.  The contact us page sends an email and the privacy page displays as expected.  
+
+The checkout page was tested using Stripe in test mode but now it's a live version.
+
+Travis CI was used to continuously test the building of the app. 
+[![Build Status](https://travis-ci.com/AlanOSheadev/Rodfendr.svg?branch=master)](https://travis-ci.com/AlanOSheadev/Rodfendr) 
  
-[Link to some screenshots of testing](https://drive.google.com/drive/folders/1cWNedjMQ3PXY46fiiigJ-YNp7qzmITsn?usp=sharing)
- 
-Responsiveness:  The site was tested on multiple devices (iPhone 4, 5/SE,6,7,8 iPhone 6,7,8 plus, iPhone X : Chrome and Safari, iPad, iPad Pro,Samsung Galaxy Slll,5S)  and was shown to load an respond as expected with all the buttons being visible and functioning in accordance with expectations 
- 
-Create:  The add fly button effectively creates a new entry into the database.  Some fields such as Name, Hook Size and Thread were made required so that only after they have been filled in the fly will be added to the database.  The fields are not case sensitive and at present will allow duplication, this is inline with expectations.
- 
-Read:  The fly name and submitted by are immediately visible on the page the rest of the components required including links if any are included in the drop down menu, this is so as not to over crowd the page with information. This is as expected.
- 
-Update:  Most of the flies have the option to be updated through the edit button on clicking edit the user is brought to a new page where all the entries except for 'Submitted by' and 'Delete' can be changed.  Only I can change the submitted by and delete information and this is as expected.
- 
-Delete:  If a fly has the option to be deleted by the presence of the red delete button it will disappear from the page and the database when this button is clicked, this is what is expected.
- 
-The search buttons are not case sensitive and will search even with a partial or even just a letter as an input.  If you enter 'a' in the Search fly by name button any fly with the letter 'a' in its name will load in a separate page, the same is true for the Search by Submitted by search box.  This is what is expected. 
- 
-The home page and search pages are paginated.  When there are more than 8 flies in the database the landing page displays them in pages of 8 with a number counter telling the visitor how many flies are being displayed and how many there are in total.  The search pages are also paginated and will display the flies in groups of 8 per page.  The search pages do not have a counter in them.  This is as expected.
- 
-I sent the Heroku link to fly fishermen and fly tiers and the feedback was that the app looks well and was seen as being very useful. They suggested that for mobile phones I should increase the size of the Link on the drop down menu on the home page as it could be hard to see otherwise.  This was adjusted and is now in line with expectations.  
+Responsiveness:  The site was tested on multiple devices (iPhone 4, 5/SE,6,7,8 iPhone 6,7,8 plus, iPhone X : Chrome and Safari, iPad, iPad Pro,Samsung Galaxy Slll,5S)  and was shown to load and respond as expected with all the buttons being visible and functioning in accordance with expectations 
  
 To validate my code I used the dev tools to examine each page and then run them through appropriate validators as follows I also beautified the code using online beautifiers.
  
@@ -133,23 +136,7 @@ Python code is validated through [PEP8](http://pep8online.com/).
 ### Deployment
 The app was written and developed on Gitpod and was regularly committed and pushed to Github and Heroku.
  
-To deploy properly the following are required to be installed using the pip3 install command as follows.
- 
-pip3 install flask
- 
-pip3 install flask-pymongo
- 
-pip3 install dnspython
- 
-pip3 install bson
- 
-pip3 freeze --local > requirements.tx
- 
-echo web: python app. py > Procfile
- 
-The app uses MongoDB and there is a URI needed to run MongoDB,  this is a secret password and as such has been placed into a file which was then added to a gitignore file.  This was done to protect the password as it should not appear on Github, if it did then anyone could copy and use my URI  
- 
-Heroku required that some variables are set up in order to deploy the app.  In this case the IP was set to 0.0.0.0 the PORT was set to 5000 and the MongoDB URI was also added.  In order to send the app to Heroku I first had to login into Heroku through the Gitpod IDE and then push all the commits to Heroku so any changes could be added to the app, on the last few pushes the Debug was set to False
+Heroku required that some variables are set up in order to deploy the app.  All secret keys and passwords used in the env.py file which is ignored by Github in the .gitignore file are stored in the config vars section of Heroku.  In order to send the app to Heroku I first had to login into Heroku through the Gitpod IDE and then push all the commits to Heroku so any changes could be added to the app, on the last few pushes the Debug was set to False
  
 [Back to Top](#summary)
  
@@ -164,4 +151,4 @@ All the content has been written by myself or contributors. The code I have used
 
 
 
-[![Build Status](https://travis-ci.com/AlanOSheadev/Rodfendr.svg?branch=master)](https://travis-ci.com/AlanOSheadev/Rodfendr)
+
