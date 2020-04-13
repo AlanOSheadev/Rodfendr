@@ -120,7 +120,7 @@ The checkout page was tested using Stripe in test mode but now it's a live versi
 ![Checkout result](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/checkoutresulttest.png "Checkout result") 
 
 The contact us page was extensively tested and at the start I had issues as can be seen from the following photos.  First I had to link with my gmail account which I had created for this app.
-![Gmail error](![Checkout result](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/checkoutresulttest.png "Gmail error") "Checkout result")
+![Gmail error](![Checkout result](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/mailtest1.png "Gmail error")
 
 Secondly I had to wire up the js file correctly.
 ![js error](![Checkout result](https://alans-ecommerce.s3-eu-west-1.amazonaws.com/static/images/jsmailtesterror.png "js error") "Checkout result")
