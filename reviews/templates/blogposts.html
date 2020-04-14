@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
     {% for post in posts %}
+    <div><a href="{% url 'new_post' %}">Add a Review</a></div>
+    <div><a class="story-img" href="#">
+                    <img  src="{{ MEDIA_URL }}{{ post.image }}" class="img-circle">
+                </a></div>
         <div class="row">
             <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-img" href="#">
-                    <img src="/media/img/profile.jpg" class="img-circle">
-                </a>
                 <p><span class="boldtext">Author:</span>{{ post.author }}</p>
             </div>
-            <div><a href="{% url 'new_post' %}">Add a Review</a></div>
             <div class="col-md-10 col-sm-9">
                 <h3>{{ post.product }}</h3>
                 <div class="row">
