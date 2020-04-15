@@ -4,4 +4,5 @@
     {% csrf_token %} {{ form | as_bootstrap }}
     <button type="submit" class="btn btn-info">Save</button>
 </form>
+<a href="{% url 'get_posts' %}" class="btn btn-default">Back to reviews</a>
 {% endblock %}
