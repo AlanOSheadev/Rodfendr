@@ -1,60 +1,64 @@
 {% extends 'base.html' %}
 <div class="container">
-{% block content %}
-<div class="welcome row justify">
-<br>
-<br>
-<h1 class="col-12">Hello! and welcome to our</h1>
-<br>
-<br>
-<br>
-<h1>Unique Fishing Tackle Solutions</h1>
-<br>
-<br>
-<p><i class="fa fa-handshake-o fa-5x" aria-hidden="true"></i></p>
-<br>
-<br>
-<p class="col-12">All our products have been designed specifically for their purpose. Our products are different, <br>affordable and come with
-    <i>shipping included</i>. We hope you enjoy your visit, if you have any <br>questions or queries please don't hesitate to <a class="nav-link active btn-purple" href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></p>
-<br>
-<br>
-</div>
-<br>
- <!-- Found on Bootsrtap -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true"  data-target="#staticBackdrop">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Cookie Bar</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    {% block content %}
+    <div class="welcome row justify">
+        <br>
+        <br>
+        <h1 class="col-12">Hello! and welcome to our</h1>
+        <br>
+        <br>
+        <br>
+        <h1>Unique Fishing Tackle Solutions</h1>
+        <br>
+        <br>
+        <p><i class="fa fa-handshake-o fa-5x" aria-hidden="true"></i></p>
+        <br>
+        <br>
+        <p class="col-12">All our products have been designed specifically for their purpose. Our products are different, <br>affordable and come with
+            <i>shipping included</i>. We hope you enjoy your visit, if you have any <br>questions or queries please don't hesitate to <a class="nav-link active btn-purple" href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></p>
+        <br>
+        <br>
+    </div>
+    <br>
+    <!-- Found on Bootsrtap -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true" data-target="#staticBackdrop">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Cookie Bar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        <p>Please accept our cookie policy to continue</p>
-        <p>our cookie policy can be found in section 6 of our Privacy Policy in our <a href="{% url 'privacy' %}"> legal section</a></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success closebtn" data-dismiss="modal">accept</button>
-      </div>
+                </div>
+                <div class="modal-body">
+                    <p>Please accept our cookie policy to continue</p>
+                    <p>our cookie policy can be found in section 6 of our Privacy Policy in our <a href="{% url 'privacy' %}"> legal section</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success closebtn" data-dismiss="modal">accept</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<div><a href="{% url 'get_posts' %}">Look at our reviews</a></div>
-<div class="container">
-    <form action="{% url 'search' %}" method="get" class="search">
-    <input type="text" name="q">
-    <button class="btn btn-success" type="submit">Search</button></form>
+    <div class="row row-flex">
+        <div class="col text-center"><a style="font-size: medium" class="btn-purple" href="{% url 'get_posts' %}">Check out our product reviews here <i class="fa fa-smile-o" aria-hidden="true"></i></a></div>
     </div>
-<div class="row row-flex">
-    {% for product in products %}
+    <br>
+    <div class="container">
+        <form action="{% url 'search' %}" method="get" class="search">
+            <input type="text" name="q">
+            <button class="btn btn-success" type="submit">Search</button></form>
+    </div>
+    <br>
+    <div class="row row-flex">
+        {% for product in products %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
                 <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 
                 <h3>{{ product.name }}</h3>
                 <p class="product-description">{{ product.description }}</p>
-                <p>Click <a href="{{ product.link }}" target="blank">here</a>  to see product video</p>
+                <p>Click <a href="{{ product.link }}" target="blank">here</a> to see product video</p>
                 <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}</p>
 
                 <form method="post" action="{% url 'add_to_cart' product.id %}">
@@ -68,7 +72,7 @@
                 </form>
             </div>
         </div>
-    {% endfor %}
-</div>
-{% endblock %}
+        {% endfor %}
+    </div>
+    {% endblock %}
 </div>

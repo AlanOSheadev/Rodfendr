@@ -37,7 +37,8 @@ def login(request):
                 else:
                     return redirect(reverse('index'))
             else:
-                user_form.add_error(None, "Your username or password are incorrect")
+                user_form.add_error(None,
+                                    "Your username or password are incorrect")
     else:
         user_form = UserLoginForm()
 

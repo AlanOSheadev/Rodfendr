@@ -12,7 +12,7 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
     views = models.IntegerField(default=0)
     image = models.ImageField(upload_to='images', blank=True, null=True)
-    author = models.CharField(max_length=200, default=0)
+    author = models.CharField(max_length=200, default="")
 
-    def __unicode__(self):
-        return self.title
+    def __str__(self):
+        return self.author

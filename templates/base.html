@@ -1,16 +1,17 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WW8QKTQ4W7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-WW8QKTQ4W7');
-</script>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW8QKTQ4W7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-WW8QKTQ4W7');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -20,25 +21,24 @@
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    {% block head_js %}
-     
-    {% endblock head_js %}
+
+    {% block head_js %} {% endblock head_js %}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_jQ7YVy8hfIPV4mTrBYSGe");
-   })();
-</script>
-<script type="text/javascript">
-    $(window).on('load',function(){
-        if (localStorage.getItem("hasCodeRunBefore") === null) {
-        $('#staticBackdrop').modal('show');
-        localStorage.setItem("hasCodeRunBefore", true);
-    }
-    });     
-</script>
+    <script type="text/javascript">
+        (function(){
+              emailjs.init("user_jQ7YVy8hfIPV4mTrBYSGe");
+           })();
+    </script>
+    <script type="text/javascript">
+        $(window).on('load',function(){
+            if (localStorage.getItem("hasCodeRunBefore") === null) {
+            $('#staticBackdrop').modal('show');
+            localStorage.setItem("hasCodeRunBefore", true);
+        }
+        });
+    </script>
 </head>
+
 <body>
     <!-- Fixed masthead -->
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
@@ -55,16 +55,16 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
-                        <li><a href="{% url 'products' %}"><i class="fa fa-home"></i> Home</a></li>
-                        <li><a href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></li>
-                        <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
-                        <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
-                        <li><a href="{% url 'privacy' %}"><i class="fa fa-balance-scale" aria-hidden="true"></i> Legal</a></li>
-                    {%  else %}
-                        <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
-                        <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
-                        <li><a href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></li>
-                        <li><a href="{% url 'privacy' %}"><i class="fa fa-balance-scale" aria-hidden="true"></i> Privacy</a></li>
+                    <li><a href="{% url 'products' %}"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></li>
+                    <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
+                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                    <li><a href="{% url 'privacy' %}"><i class="fa fa-balance-scale" aria-hidden="true"></i> Legal</a></li>
+                    {% else %}
+                    <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
+                    <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
+                    <li><a href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></li>
+                    <li><a href="{% url 'privacy' %}"><i class="fa fa-balance-scale" aria-hidden="true"></i> Privacy</a></li>
                     {% endif %}
                     <li>
                         <a href="{% url 'view_cart' %}">
@@ -79,69 +79,61 @@
             </div>
         </div>
     </nav>
-    {% if messages %}
-        <div class="alert alert-success">
-            <div class="messages">
-                {% for message in messages %}
-                    {{ message }}
-                {% endfor %}
-            </div>
-        </div>
-    {% endif %}
-    
-        {% block content %}
-       
-        {% endblock %}
-       
-     <!-- Found on W3 schools -->
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Top</button>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+
+    {% block content %} {% endblock %}
+
+    <!-- Found on W3 schools -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Top</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <footer class="container-fluid navbar-fixed-bottom">
-             <ul class="navbar navbar-masthead nav navbar-center row row-flex justify-content-center">
-                <li class="nav-item col-12">
-                    <a class="nav-link active btn-purple" href="{% url 'products' %}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                </li>
-                <li class="nav-item"><a class="nav-link active btn-purple" href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></li>
-                <li class="nav-item">
-                    <a class="nav-link btn-purple" href="https://business.facebook.com/Rodfendr/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn-purple" href="https://www.instagram.com/rodfendr_fishing_tackle/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn-purple" href="https://twitter.com/rodfendr" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn-purple" href="https://www.pinterest.ie/alanosheaclash/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn-purple" href="https://www.linkedin.com/in/alan-o-shea-/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                </li>
-            </ul>
+        <ul class="navbar navbar-masthead nav navbar-center row row-flex justify-content-center">
+            <li class="nav-item col-12">
+                <a class="nav-link active btn-purple" href="{% url 'products' %}"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link active btn-purple" href="{% url 'contact_us' %}"><i class="fa fa-comment-o"></i> Contact Us</a></li>
+            <li class="nav-item">
+                <a class="nav-link btn-purple" href="https://business.facebook.com/Rodfendr/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-purple" href="https://www.instagram.com/rodfendr_fishing_tackle/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-purple" href="https://twitter.com/rodfendr" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-purple" href="https://www.pinterest.ie/alanosheaclash/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-purple" href="https://www.linkedin.com/in/alan-o-shea-/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </li>
+        </ul>
     </footer>
     <script src="{% static 'js/sendmail.js' %}"></script>
-        <script>//Get the button: found on W3 schools
-mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}</script>
+    <script>
+        //Get the button: found on W3 schools
+        mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0; // For Safari
+          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
 </body>
+
 </html>

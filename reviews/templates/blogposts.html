@@ -1,26 +1,28 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% block content %}
-    {% for post in posts %}
-    <div><a href="{% url 'new_post' %}">Add a Review</a></div>
-    <div><a class="story-img" href="#">
-                    <img  src="{{ MEDIA_URL }}{{ post.image }}" class="img-circle">
-                </a></div>
+<br>
+<br>
+<br>
+<div style="font-size: large"><a href="{% url 'new_post' %}">Add a Review</a></div>
+{% for post in posts %}
+<div class="row">
+    <div class="col-md-2 col-sm-3 text-center">
+        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ post.image }}')"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10 col-sm-9">
+        <h3>{{ post.product }}</h3>
         <div class="row">
-            <div class="col-md-2 col-sm-3 text-center">
+            <div class="col-xs-9">
+                <p>{{ post.content|truncatewords:30 }}</p>
+                <p><a href="{% url 'post_detail' post.id %}" class="btn btn-default">Read more</a></p>
+                <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
+                <p><span class="boldtext">Views:</span> {{post.views}}</p>
                 <p><span class="boldtext">Author:</span>{{ post.author }}</p>
             </div>
-            <div class="col-md-10 col-sm-9">
-                <h3>{{ post.product }}</h3>
-                <div class="row">
-                    <div class="col-xs-9">
-                        <p>{{ post.content|truncatewords:30 }}</p>
-                        <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-default">Read more</a></p>
-                        <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                        <p><span class="boldtext">Views:</span> {{post.views}}</p>
-                    </div>
-                </div>
-            </div>
-            <hr>
         </div>
-    {% endfor %}
-{% endblock %}
+    </div>
+    <hr>
+</div>
+{% endfor %} {% endblock %}
