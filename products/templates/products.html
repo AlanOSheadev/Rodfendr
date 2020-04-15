@@ -59,7 +59,7 @@
                 <h3>{{ product.name }}</h3>
                 <p class="product-description">{{ product.description }}</p>
                 <p>Click <a href="{{ product.link }}" target="blank">here</a> to see product video</p>
-                <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}</p>
+                <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ product.price }}  Shipping is included</p>
 
                 <form method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
