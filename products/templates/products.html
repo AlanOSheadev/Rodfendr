@@ -45,9 +45,29 @@
     </div>
     <br>
     <div class="container">
+    <div class="row row-flex">
+    <div class="col-md-4  text-center">
         <form action="{% url 'search' %}" method="get" class="search">
             <input type="text" name="q">
             <button class="btn btn-success" type="submit">Search</button></form>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4  content-center search">
+            <button class="btn btn-success">Trustpilot reviews
+            <script> 
+	document.addEventListener('DOMContentLoaded', function() {
+		const trustpilot_invitation = {
+   			recipientEmail: 'Rodfendr@gmail.com',
+   			recipientName: 'Alan',
+   			referenceId: '{{ product.name }}',
+   			source: 'InvitationScript',
+  		};
+  		tp('createInvitation', trustpilot_invitation);
+	});
+</script>
+</button>
+</div>
+    </div>
     </div>
     <br>
     <div class="row row-flex">
