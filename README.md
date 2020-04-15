@@ -70,7 +70,9 @@ Before you have registeres the top navigation bar shows the following options 'R
 
 There is a large but not overwhelming hero image which shows me fishing with Rodfendr the message contained within is welcoming and lets you know that shipping is included in our pricing.
 
-There is a simple search bar which will bring you to a product within our range of products.
+There is a simple search bar which will bring you to a product within our range of products. 
+
+There is also a button which will take the visitor to our product reviews which are reviews from customers and industry experts.  The visitor can also add their own reviews which can include pictures if they wish.
 
 Next you are shown all our current products which have a picture of the product as well as a biref description and a short video of each product and an option to select the number of each product you wish to purchase.  This sections is very clean and clear as I want the main focus to be on the products.
 
@@ -89,6 +91,8 @@ Google analytics records your visit and your behaviour while on the site.
 I would like to add facebook pixels so that I can retarget those visiting the site with products that may interest them.
 
 I tried to add discount codes to the app but it proved a little difficult so I made the decision to add them later when I have more experience.
+
+I tried to add trustpilot to the app but it would not function as expected to I had to remove it for the project but I will try again later.
 
  
 [Back to Top](#summary)
@@ -298,7 +302,7 @@ Copy the GET line and change it to HEAD to read font awesome CSS properly
 [Back to Top](#summary)
  
 ### Media 
-The photos and videos on the app are mine. I also appear in many of them myself.
+The photos and videos on the app are mine. I also appear in many of them myself. The photos in the reviews section are the property of the person who submitted them and have done so willingly.
 
  
 ### Credits
