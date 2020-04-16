@@ -6,9 +6,13 @@
 {% if total == 0 %}
 <br>
 <br>
-    <h1 class="text-center">There are no items in your Cart!</h1>
-    <br>
-    <h3 class="text-center">Please choose from our products <a href="{% url 'products' %}"> here</a></h3>
+    <div class="text-center">
+        <h1>Oops! are no items in your Cart!</h1>
+        <br>
+        <i class="fa fa-cart-plus fa-5x" aria-hidden="true"></i>
+        <br>
+        <h2>Please choose from our products <a href="{% url 'products' %}"> here</a></h2>
+    </div>
 {% else %}
 <div class="row row-flex">
     {% for item in cart_items %}
