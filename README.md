@@ -310,7 +310,3 @@ The photos and videos on the app are mine. I also appear in many of them myself.
 All the content has been written by myself. The code I have used has come from videos that I have watched from the Code Institute and from previous projects I have made comments on code that I have used throughout the project.  I would like to thank Cormac, Stephen and my classmates who were a great resource during this project. 
  
 [Back to Top](#summary)
-
-
-
-
