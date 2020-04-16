@@ -82,7 +82,7 @@ To purchase your items first you must select the cart and you are given a chance
 
 Google analytics records your visit and your behaviour while on the site.
 
-
+Based on feedback from friends and Matt Rudge of The Code Institute I made it clear what the site is about by adding a hero image, I added complimentary fonts to the headings and body and I added an if statement to the cart so that if there is an empty cart you cannot go to the checkout.
 
 [Back to Top](#summary)
  
