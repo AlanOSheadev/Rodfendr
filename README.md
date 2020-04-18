@@ -43,7 +43,7 @@ The app is designed to get the visitor to think about what fishing tackle they w
  
 ### Structure
  
-The page is designed to make the visitor feel welcome and to think about what fishing tackle they might need it is likely that they have not seen all of our products before anywhere.  The hero image give a great sense of how a relaxing day fishing can be good for you.  The message within the image is welcoming and lets you know that the price includes shipping.  As you scroll down you immediately see our unique list of products each has a picture and a brief description as well as a short video.  I felt that this was the best way to communicate the benefits of our products without overwhelming the visitor with information and allowing them to a decision on what to purchase.
+The page is designed to make the visitor feel welcome and to think about what fishing tackle they might need it is likely that they have not seen all of our products before anywhere.  The hero image give a great sense of how a relaxing day fishing can be good for you. The message within the image is welcoming and lets you know that the price includes shipping.  As you scroll down you immediately see our unique list of products each has a picture and a brief description as well as a short video.  I felt that this was the best way to communicate the benefits of our products without overwhelming the visitor with information and allowing them to a decision on what to purchase. I have tried to use the rule of thirds throughout the home page shows the products listed in rows of 3 and I used the same design for the reviews page.
  
 [Back to Top](#summary)
  
